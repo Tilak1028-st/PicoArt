@@ -1,0 +1,6 @@
+framework module Pods_PicoArt {
+  umbrella header "Pods-PicoArt-umbrella.h"
+
+  export *
+  module * { export * }
+}

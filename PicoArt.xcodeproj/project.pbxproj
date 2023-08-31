@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		645646C9BB6F4C2610F221CC /* Pods_PicoArt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9B84A7C08D96CF5BA9B5B /* Pods_PicoArt.framework */; };
+		721282BE2AA0D45200FE554E /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721282BC2AA0D45200FE554E /* CollectionTableViewCell.swift */; };
+		721282BF2AA0D45200FE554E /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721282BD2AA0D45200FE554E /* CollectionTableViewCell.xib */; };
 		723ADA1D2A99F3D600D216AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA1C2A99F3D600D216AB /* AppDelegate.swift */; };
 		723ADA1F2A99F3D600D216AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */; };
 		723ADA212A99F3D600D216AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA202A99F3D600D216AB /* ViewController.swift */; };
 		723ADA242A99F3D600D216AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA222A99F3D600D216AB /* Main.storyboard */; };
 		723ADA262A99F3D800D216AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA252A99F3D800D216AB /* Assets.xcassets */; };
 		723ADA292A99F3D800D216AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA272A99F3D800D216AB /* LaunchScreen.storyboard */; };
+		72DD5E0E2AA05989007E2CCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */; };
+		72DD5E102AA05996007E2CCD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E0F2AA05996007E2CCD /* CollectionViewController.swift */; };
+		72DD5E122AA059A1007E2CCD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E112AA059A1007E2CCD /* SettingViewController.swift */; };
+		72DD5E142AA063D4007E2CCD /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */; };
+		72DD5E162AA07D47007E2CCD /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */; };
+		72DD5E182AA07D62007E2CCD /* TermAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		721282BC2AA0D45200FE554E /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		721282BD2AA0D45200FE554E /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		723ADA192A99F3D600D216AB /* PicoArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicoArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ADA1C2A99F3D600D216AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,15 @@
 		723ADA252A99F3D800D216AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723ADA282A99F3D800D216AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723ADA2A2A99F3D800D216AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		72DD5E0F2AA05996007E2CCD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		72DD5E112AA059A1007E2CCD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionViewController.swift; sourceTree = "<group>"; };
+		A8C9B84A7C08D96CF5BA9B5B /* Pods_PicoArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicoArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB8958598B08EC9EC7DB325 /* Pods-PicoArt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicoArt.release.xcconfig"; path = "Target Support Files/Pods-PicoArt/Pods-PicoArt.release.xcconfig"; sourceTree = "<group>"; };
+		ECF606A2C417D446C9726E72 /* Pods-PicoArt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicoArt.debug.xcconfig"; path = "Target Support Files/Pods-PicoArt/Pods-PicoArt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645646C9BB6F4C2610F221CC /* Pods_PicoArt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721282BB2AA0D43000FE554E /* CollectionTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				721282BC2AA0D45200FE554E /* CollectionTableViewCell.swift */,
+				721282BD2AA0D45200FE554E /* CollectionTableViewCell.xib */,
+			);
+			path = CollectionTableCell;
+			sourceTree = "<group>";
+		};
 		723ADA102A99F3D600D216AB = {
 			isa = PBXGroup;
 			children = (
 				723ADA1B2A99F3D600D216AB /* PicoArt */,
 				723ADA1A2A99F3D600D216AB /* Products */,
+				EB4E24C3FD9317A6608431EC /* Pods */,
+				72DC8184E31C167C1B1829D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +91,68 @@
 				723ADA1C2A99F3D600D216AB /* AppDelegate.swift */,
 				723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */,
 				723ADA202A99F3D600D216AB /* ViewController.swift */,
+				72DD5E092AA0594C007E2CCD /* Tabs */,
 				723ADA222A99F3D600D216AB /* Main.storyboard */,
 				723ADA252A99F3D800D216AB /* Assets.xcassets */,
 				723ADA272A99F3D800D216AB /* LaunchScreen.storyboard */,
 				723ADA2A2A99F3D800D216AB /* Info.plist */,
 			);
 			path = PicoArt;
+			sourceTree = "<group>";
+		};
+		72DC8184E31C167C1B1829D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B84A7C08D96CF5BA9B5B /* Pods_PicoArt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72DD5E092AA0594C007E2CCD /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */,
+				72DD5E0A2AA05955007E2CCD /* Home */,
+				72DD5E0B2AA0595C007E2CCD /* Collection */,
+				72DD5E0C2AA05966007E2CCD /* Setting */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		72DD5E0A2AA05955007E2CCD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		72DD5E0B2AA0595C007E2CCD /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				72DD5E0F2AA05996007E2CCD /* CollectionViewController.swift */,
+				721282BB2AA0D43000FE554E /* CollectionTableCell */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		72DD5E0C2AA05966007E2CCD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				72DD5E112AA059A1007E2CCD /* SettingViewController.swift */,
+				72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */,
+				72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EB4E24C3FD9317A6608431EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECF606A2C417D446C9726E72 /* Pods-PicoArt.debug.xcconfig */,
+				CFB8958598B08EC9EC7DB325 /* Pods-PicoArt.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 723ADA2D2A99F3D800D216AB /* Build configuration list for PBXNativeTarget "PicoArt" */;
 			buildPhases = (
+				4A02886D40E1365A63068F11 /* [CP] Check Pods Manifest.lock */,
 				723ADA152A99F3D600D216AB /* Sources */,
 				723ADA162A99F3D600D216AB /* Frameworks */,
 				723ADA172A99F3D600D216AB /* Resources */,
+				B686708AD28B18BE82FB8992 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +218,53 @@
 				723ADA292A99F3D800D216AB /* LaunchScreen.storyboard in Resources */,
 				723ADA262A99F3D800D216AB /* Assets.xcassets in Resources */,
 				723ADA242A99F3D600D216AB /* Main.storyboard in Resources */,
+				721282BF2AA0D45200FE554E /* CollectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A02886D40E1365A63068F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicoArt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B686708AD28B18BE82FB8992 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicoArt/Pods-PicoArt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicoArt/Pods-PicoArt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicoArt/Pods-PicoArt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		723ADA152A99F3D600D216AB /* Sources */ = {
@@ -139,8 +272,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				723ADA212A99F3D600D216AB /* ViewController.swift in Sources */,
+				72DD5E182AA07D62007E2CCD /* TermAndConditionViewController.swift in Sources */,
 				723ADA1D2A99F3D600D216AB /* AppDelegate.swift in Sources */,
 				723ADA1F2A99F3D600D216AB /* SceneDelegate.swift in Sources */,
+				72DD5E162AA07D47007E2CCD /* PrivacyPolicyViewController.swift in Sources */,
+				721282BE2AA0D45200FE554E /* CollectionTableViewCell.swift in Sources */,
+				72DD5E0E2AA05989007E2CCD /* HomeViewController.swift in Sources */,
+				72DD5E102AA05996007E2CCD /* CollectionViewController.swift in Sources */,
+				72DD5E142AA063D4007E2CCD /* MainTabViewController.swift in Sources */,
+				72DD5E122AA059A1007E2CCD /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +422,7 @@
 		};
 		723ADA2E2A99F3D800D216AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF606A2C417D446C9726E72 /* Pods-PicoArt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +435,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +451,7 @@
 		};
 		723ADA2F2A99F3D800D216AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB8958598B08EC9EC7DB325 /* Pods-PicoArt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +464,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

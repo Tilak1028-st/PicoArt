@@ -1,30 +1,26 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  PicoArt
 //
-//  Created by Tilak Shakya on 26/08/23.
+//  Created by Tilak Shakya on 31/08/23.
 //
 
 import UIKit
 import iOSPhotoEditor
 import Photos
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     var newImage = ["hat1", "hat2", "hat3", "hat4", "beard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        
-        
-       // photoEditor.stickers.append(UIImage(named: "hat1")!)
-
-        //Optional: To hide controls - array of enum control
-     //   photoEditor.hiddenControls = [.crop, .draw, .share]
-
-        //Optional: Colors for drawing and Text, If not set default values will be used
     }
-    
+
+    @IBAction func didTapOnImportPicture(_ sender: UIButton) {
+        pickImageFromLibrary()
+    }
     
     func pickImageFromLibrary() {
         let imagePicker = UIImagePickerController()
@@ -32,16 +28,9 @@ class ViewController: UIViewController {
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
-
-    
-    @IBAction func didTapOnImportImage(_ sender: UIButton) {
-        pickImageFromLibrary()
-    }
-    
-    
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             // You have the picked image, you can now navigate to the next view controller
@@ -73,7 +62,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 }
 
 
-extension ViewController: PhotoEditorDelegate {
+extension HomeViewController: PhotoEditorDelegate {
     func doneEditing(image: UIImage) {
         print("Done")
     }
@@ -82,4 +71,5 @@ extension ViewController: PhotoEditorDelegate {
         print("Cancel")
     }
 }
+
 
