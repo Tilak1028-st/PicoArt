@@ -10,12 +10,13 @@ import iOSPhotoEditor
 import Photos
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var topView: UIView!
     var newImage = ["hat1", "hat2", "hat3", "hat4", "beard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        topView.applyShadow(to: topView, shadowOffset: CGSize(width: 0, height: 3), shadowRadius: 3)
     }
 
     @IBAction func didTapOnImportPicture(_ sender: UIButton) {
@@ -32,6 +33,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
         if let pickedImage = info[.originalImage] as? UIImage {
             // You have the picked image, you can now navigate to the next view controller
             let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController",bundle: Bundle(for: PhotoEditorViewController.self))
@@ -50,10 +52,9 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
             photoEditor.colors = [.red,.blue,.green, .orange, .yellow, .black, .brown, .cyan, .gray, .magenta, .purple, .white]
 
             //Present the View Controller
+            photoEditor.modalPresentationStyle = .fullScreen
             self.present(photoEditor, animated: true, completion: nil)
-            self.navigationController?.pushViewController(photoEditor, animated: true)
         }
-        picker.dismiss(animated: true, completion: nil)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -69,6 +70,7 @@ extension HomeViewController: PhotoEditorDelegate {
     
     func canceledEditing() {
         print("Cancel")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
