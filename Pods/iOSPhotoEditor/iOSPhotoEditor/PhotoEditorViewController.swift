@@ -31,6 +31,9 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var colorPickerViewBottomConstraint: NSLayoutConstraint!
     
     //Controls
+    
+    @IBOutlet weak var continueButton: UIButton!
+    
     @IBOutlet weak var cropButton: UIButton!
     @IBOutlet weak var stickerButton: UIButton!
     @IBOutlet weak var drawButton: UIButton!
@@ -102,6 +105,7 @@ public final class PhotoEditorViewController: UIViewController {
         
         configureCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
+       // stickerButton.isHidden = true
         hideControls()
     }
     

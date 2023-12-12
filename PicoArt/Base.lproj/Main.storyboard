@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0le-Mk-36C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0le-Mk-36C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--First Intro View Controller-->
+        <scene sceneID="Jtg-y0-Bco">
+            <objects>
+                <viewController storyboardIdentifier="FirstIntroViewController" id="szP-dY-fyh" customClass="FirstIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="geS-F9-TQF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWz-dA-mnF">
+                                <rect key="frame" x="169.5" y="777" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="iDp-O8-pz8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnSkipButton:" destination="szP-dY-fyh" eventType="touchUpInside" id="0kz-MX-66z"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Apple iPhone 8 Plus Screenshot 0" translatesAutoresizingMaskIntoConstraints="NO" id="aOo-bb-EaM">
+                                <rect key="frame" x="0.0" y="48" width="414" height="704"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GqB-Sk-0tp"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.85490196078431369" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GqB-Sk-0tp" firstAttribute="bottom" secondItem="zWz-dA-mnF" secondAttribute="bottom" constant="50" id="0NE-vM-L4A"/>
+                            <constraint firstItem="aOo-bb-EaM" firstAttribute="top" secondItem="GqB-Sk-0tp" secondAttribute="top" id="HaT-ew-XfG"/>
+                            <constraint firstItem="aOo-bb-EaM" firstAttribute="trailing" secondItem="geS-F9-TQF" secondAttribute="trailing" id="OVW-tM-Wge"/>
+                            <constraint firstItem="zWz-dA-mnF" firstAttribute="centerX" secondItem="geS-F9-TQF" secondAttribute="centerX" id="T2W-Mn-ZvB"/>
+                            <constraint firstItem="aOo-bb-EaM" firstAttribute="leading" secondItem="geS-F9-TQF" secondAttribute="leading" id="Y5s-tQ-5Al"/>
+                            <constraint firstItem="zWz-dA-mnF" firstAttribute="top" secondItem="aOo-bb-EaM" secondAttribute="bottom" constant="25" id="yvW-dh-Lsc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-Oi-6Wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.01449275362324" y="-735.26785714285711"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="UTp-G6-lvp">
             <objects>
@@ -19,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fcE-yc-fJN" kind="relationship" relationship="rootViewController" id="zoc-Ck-zfD"/>
+                        <segue destination="3Uo-C1-YAk" kind="relationship" relationship="rootViewController" id="JBb-8i-pZq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTv-yv-owL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,69 +76,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oH-mX-oyQ">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3o1-Ik-ZdQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-play-32" translatesAutoresizingMaskIntoConstraints="NO" id="fs3-1o-kpL">
-                                                <rect key="frame" x="122.5" y="10" width="30" height="30"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newAppBanner" translatesAutoresizingMaskIntoConstraints="NO" id="fs3-1o-kpL">
+                                                <rect key="frame" x="122.5" y="5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="55b-le-eQZ"/>
                                                     <constraint firstAttribute="height" constant="30" id="xXE-XD-hXn"/>
                                                 </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PicoArt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gud-Kh-6wS">
-                                                <rect key="frame" x="162.5" y="9" width="89" height="32"/>
+                                                <rect key="frame" x="162.5" y="4" width="89" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-vD-hXy">
+                                                <rect key="frame" x="10" y="3" width="54.5" height="34.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <imageReference key="image" image="gear.circle" catalog="system" symbolScale="large"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapOnBackButton:" destination="18w-0z-3Ke" eventType="touchUpInside" id="dTI-Ku-ux0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="ugg-vD-hXy" firstAttribute="leading" secondItem="3o1-Ik-ZdQ" secondAttribute="leading" constant="10" id="BqR-Oc-DZF"/>
                                             <constraint firstItem="Gud-Kh-6wS" firstAttribute="centerY" secondItem="3o1-Ik-ZdQ" secondAttribute="centerY" id="E7T-NA-bKH"/>
+                                            <constraint firstItem="ugg-vD-hXy" firstAttribute="centerY" secondItem="3o1-Ik-ZdQ" secondAttribute="centerY" id="Srt-R6-HPF"/>
                                             <constraint firstItem="fs3-1o-kpL" firstAttribute="centerY" secondItem="Gud-Kh-6wS" secondAttribute="centerY" id="cUZ-Xt-I3A"/>
                                             <constraint firstItem="Gud-Kh-6wS" firstAttribute="leading" secondItem="fs3-1o-kpL" secondAttribute="trailing" constant="10" id="hf3-iM-N4x"/>
-                                            <constraint firstAttribute="height" constant="50" id="mzx-eU-0V6"/>
+                                            <constraint firstAttribute="height" constant="40" id="mzx-eU-0V6"/>
                                             <constraint firstItem="Gud-Kh-6wS" firstAttribute="centerX" secondItem="3o1-Ik-ZdQ" secondAttribute="centerX" id="pQ9-GW-QJ8"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-FH-tqE">
-                                        <rect key="frame" x="25" y="341.5" width="364" height="38"/>
+                                        <rect key="frame" x="25" y="382" width="364" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Import Picture">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                            <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didTapOnImportPicture:" destination="18w-0z-3Ke" eventType="touchUpInside" id="odb-fE-gF8"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your photos like never before" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDJ-T5-DbX">
-                                        <rect key="frame" x="41.5" y="295" width="331.5" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your photos like never before" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDJ-T5-DbX">
+                                        <rect key="frame" x="25" y="335.5" width="364" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.85490196078431369" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="NbZ-FH-tqE" firstAttribute="top" secondItem="CDJ-T5-DbX" secondAttribute="bottom" constant="20" id="5tX-Y4-Vma"/>
+                                    <constraint firstItem="CDJ-T5-DbX" firstAttribute="trailing" secondItem="NbZ-FH-tqE" secondAttribute="trailing" id="EPz-ef-x1y"/>
                                     <constraint firstItem="CDJ-T5-DbX" firstAttribute="centerX" secondItem="6oH-mX-oyQ" secondAttribute="centerX" id="JLQ-TT-2IB"/>
                                     <constraint firstItem="NbZ-FH-tqE" firstAttribute="leading" secondItem="6oH-mX-oyQ" secondAttribute="leading" constant="25" id="PT2-zt-OKJ"/>
                                     <constraint firstItem="NbZ-FH-tqE" firstAttribute="centerY" secondItem="6oH-mX-oyQ" secondAttribute="centerY" id="TXr-kT-x7K"/>
                                     <constraint firstAttribute="trailing" secondItem="NbZ-FH-tqE" secondAttribute="trailing" constant="25" id="Xca-MW-f9P"/>
                                     <constraint firstAttribute="trailing" secondItem="3o1-Ik-ZdQ" secondAttribute="trailing" id="btW-NH-bvN"/>
                                     <constraint firstItem="3o1-Ik-ZdQ" firstAttribute="top" secondItem="6oH-mX-oyQ" secondAttribute="top" id="j4g-Jj-EUn"/>
+                                    <constraint firstItem="CDJ-T5-DbX" firstAttribute="leading" secondItem="NbZ-FH-tqE" secondAttribute="leading" id="lRM-gT-h9j"/>
                                     <constraint firstItem="3o1-Ik-ZdQ" firstAttribute="leading" secondItem="6oH-mX-oyQ" secondAttribute="leading" id="rlo-RU-PFE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjt-Go-8p9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.85490196078431369" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="NbZ-FH-tqE" firstAttribute="height" secondItem="t6T-fA-4mu" secondAttribute="height" multiplier="0.0558036" id="4US-CB-Ze2"/>
                             <constraint firstItem="gjt-Go-8p9" firstAttribute="trailing" secondItem="6oH-mX-oyQ" secondAttribute="trailing" id="6mW-yA-pki"/>
                             <constraint firstItem="6oH-mX-oyQ" firstAttribute="leading" secondItem="gjt-Go-8p9" secondAttribute="leading" id="9NG-82-k0b"/>
                             <constraint firstItem="6oH-mX-oyQ" firstAttribute="top" secondItem="gjt-Go-8p9" secondAttribute="top" id="D3i-xA-VJe"/>
@@ -113,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jq-Ho-hTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.26086956521743" y="766.74107142857144"/>
+            <point key="canvasLocation" x="-59" y="785"/>
         </scene>
         <!--Collection-->
         <scene sceneID="gxf-PD-jEa">
@@ -201,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wL3-rP-eR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470.9923664122137" y="766.90140845070425"/>
+            <point key="canvasLocation" x="665" y="785"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qQA-90-3Js">
@@ -215,14 +274,177 @@
                         <color key="tintColor" systemColor="tintColor"/>
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="18w-0z-3Ke" kind="relationship" relationship="viewControllers" id="Vjl-q9-2Ji"/>
-                        <segue destination="C4j-wg-OFS" kind="relationship" relationship="viewControllers" id="r8k-pP-tFu"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acx-9D-nHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="-187"/>
+            <point key="canvasLocation" x="1470" y="-70"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="dpL-3g-Mkz">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="7iq-jX-22m" customClass="MainViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yxd-LW-on6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="YDJ-fS-kRf">
+                                <rect key="frame" x="103.5" y="134" width="207" height="448"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-88-GhH" customClass="MGK3DButton" customModule="PicoArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" title="Edit" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customShadowColor">
+                                                <color key="value" systemColor="systemGray6Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didtapOnEdit:" destination="7iq-jX-22m" eventType="touchUpInside" id="hlu-9v-Cmo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK1-lu-G9f" customClass="MGK3DButton" customModule="PicoArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="74.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Share">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customShadowColor">
+                                                <color key="value" systemColor="systemGray6Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapOnShare:" destination="7iq-jX-22m" eventType="touchUpInside" id="53f-Xn-CAb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY6-hQ-Geg" customClass="MGK3DButton" customModule="PicoArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124.5" width="207" height="74.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="About us">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customShadowColor">
+                                                <color key="value" systemColor="systemGray6Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapOnAboutUs:" destination="7iq-jX-22m" eventType="touchUpInside" id="SkD-G3-EsD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f05-Mn-5Gf" customClass="MGK3DButton" customModule="PicoArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="249" width="207" height="74.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Privacy Policy">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customShadowColor">
+                                                <color key="value" systemColor="systemGray6Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapOnPrivacyPolicy:" destination="7iq-jX-22m" eventType="touchUpInside" id="ukw-kx-VrF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhm-cp-b54" customClass="MGK3DButton" customModule="PicoArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="373.5" width="207" height="74.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="T &amp; C">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customShadowColor">
+                                                <color key="value" systemColor="systemGray6Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapOnTerms:" destination="7iq-jX-22m" eventType="touchUpInside" id="1MT-sN-5OZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PicoArt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qy-CF-hpI">
+                                <rect key="frame" x="156.5" y="48" width="101" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VUP-hP-G5A"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YDJ-fS-kRf" firstAttribute="centerX" secondItem="Yxd-LW-on6" secondAttribute="centerX" id="L1v-IH-Ve2"/>
+                            <constraint firstItem="6Qy-CF-hpI" firstAttribute="top" secondItem="VUP-hP-G5A" secondAttribute="top" id="Lyz-uk-I60"/>
+                            <constraint firstItem="YDJ-fS-kRf" firstAttribute="top" secondItem="6Qy-CF-hpI" secondAttribute="bottom" constant="50" id="R7f-bz-bad"/>
+                            <constraint firstItem="YDJ-fS-kRf" firstAttribute="height" secondItem="Yxd-LW-on6" secondAttribute="height" multiplier="0.5" id="TCT-o5-MKH"/>
+                            <constraint firstItem="YDJ-fS-kRf" firstAttribute="width" secondItem="Yxd-LW-on6" secondAttribute="width" multiplier="0.5" id="b1d-7K-JSG"/>
+                            <constraint firstItem="6Qy-CF-hpI" firstAttribute="centerX" secondItem="Yxd-LW-on6" secondAttribute="centerX" id="fUy-tz-h4k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Il-0K-7bU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmj-O0-7VW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-70"/>
+        </scene>
+        <!--New Main Intro View Controller-->
+        <scene sceneID="CWh-FA-Sq3">
+            <objects>
+                <pageViewController storyboardIdentifier="NewMainIntroViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="3Uo-C1-YAk" customClass="NewMainIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mRI-EA-Xnm"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKY-cS-OTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="-70"/>
         </scene>
         <!--Setting-->
         <scene sceneID="BUt-qe-x7b">
@@ -233,7 +455,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fgh-Y2-dW0">
-                                <rect key="frame" x="10" y="150" width="394" height="663"/>
+                                <rect key="frame" x="10" y="106" width="394" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingCell" textLabel="aqr-K3-70u" style="IBUITableViewCellStyleDefault" id="cPV-tO-L9C">
@@ -262,7 +484,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR4-67-JdQ" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="92" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPf-DR-m8Z">
                                         <rect key="frame" x="164" y="9" width="86.5" height="32"/>
@@ -301,12 +523,353 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlI-74-0YI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.7633587786258" y="774.64788732394368"/>
+            <point key="canvasLocation" x="1375" y="785"/>
         </scene>
         <!--Privacy Policy View Controller-->
+        <scene sceneID="LBl-AX-5qu">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="wV7-Tr-KLb" customClass="PrivacyPolicyViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Z9-TJ-Rjz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gcY-32-axe">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="privacyCell" textLabel="NDz-Bc-4i9" style="IBUITableViewCellStyleDefault" id="CLm-vp-yRB">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="1504.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLm-vp-yRB" id="J2A-ak-5gk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1504.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NDz-Bc-4i9">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="1504.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <mutableString key="text">Privacy Policy for PicoArt
+
+Effective Date: December 12, 2023.
+
+Introduction
+
+PicoArt ("we," "us," or "our") is committed to respecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application, PicoArt. We do not collect or store any user data as part of our commitment to safeguarding your privacy.
+
+Information We Do Not Collect
+
+We want to be clear about the information we do not collect from our users:
+
+Personal Information: PicoArt does not collect or store any personally identifiable information such as names, email addresses, phone numbers, or user profiles.
+Images and Content: We do not access, upload, or store any images or content that you create, edit, or interact with in the app. Your images and content remain on your device.
+Location Information: PicoArt does not request, access, or use your device's location information.
+Usage Data: We do not track or collect data on how you use the app, including the specific features you access or the frequency of your usage.
+Cookies and Analytics
+
+PicoArt does not use cookies or any third-party analytics tools to track your activities within the app.
+
+Third-Party Services
+
+Our app may contain links to third-party websites or services for informational or sharing purposes. We are not responsible for the privacy practices or content of these third-party services. Please review their privacy policies separately if you choose to visit them.
+
+Changes to this Privacy Policy
+
+We may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify users of any significant changes by updating the "Effective Date" at the beginning of this Privacy Policy.
+
+Contact Us
+
+If you have any questions or concerns about this Privacy Policy or your privacy while using PicoArt, please contact us at kuldeepioskk@gmail.com.
+
+Thank you for choosing PicoArt for your image editing needs.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wV7-Tr-KLb" id="IH1-9m-d1q"/>
+                                    <outlet property="delegate" destination="wV7-Tr-KLb" id="Mfx-z1-8BA"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCu-gM-wBO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PicoArt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JJ-KS-nNl">
+                                        <rect key="frame" x="173" y="13" width="68" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBz-lt-7kz">
+                                        <rect key="frame" x="10" y="7.5" width="55.5" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.fill" catalog="system" title=" "/>
+                                        <connections>
+                                            <action selector="didTapOnBackButton:" destination="wV7-Tr-KLb" eventType="touchUpInside" id="zFk-sZ-RdZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WBz-lt-7kz" firstAttribute="leading" secondItem="uCu-gM-wBO" secondAttribute="leading" constant="10" id="HQj-34-oam"/>
+                                    <constraint firstItem="6JJ-KS-nNl" firstAttribute="centerY" secondItem="uCu-gM-wBO" secondAttribute="centerY" id="SvE-tL-fta"/>
+                                    <constraint firstItem="6JJ-KS-nNl" firstAttribute="centerX" secondItem="uCu-gM-wBO" secondAttribute="centerX" id="X0L-FN-NAU"/>
+                                    <constraint firstItem="WBz-lt-7kz" firstAttribute="centerY" secondItem="uCu-gM-wBO" secondAttribute="centerY" id="zCX-0s-aLG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qN2-kg-fnk"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gcY-32-axe" firstAttribute="top" secondItem="qN2-kg-fnk" secondAttribute="top" constant="60" id="5ij-1u-VJ7"/>
+                            <constraint firstItem="qN2-kg-fnk" firstAttribute="bottom" secondItem="gcY-32-axe" secondAttribute="bottom" id="62H-FU-BXl"/>
+                            <constraint firstItem="gcY-32-axe" firstAttribute="leading" secondItem="qN2-kg-fnk" secondAttribute="leading" id="CAe-hS-mtc"/>
+                            <constraint firstItem="uCu-gM-wBO" firstAttribute="leading" secondItem="qN2-kg-fnk" secondAttribute="leading" id="Rrz-GP-YCf"/>
+                            <constraint firstItem="uCu-gM-wBO" firstAttribute="height" secondItem="9Z9-TJ-Rjz" secondAttribute="height" multiplier="0.0558036" id="bfs-Sq-ewo"/>
+                            <constraint firstItem="uCu-gM-wBO" firstAttribute="trailing" secondItem="qN2-kg-fnk" secondAttribute="trailing" id="hGk-9x-pNS"/>
+                            <constraint firstItem="uCu-gM-wBO" firstAttribute="top" secondItem="qN2-kg-fnk" secondAttribute="top" id="nYe-fc-0AK"/>
+                            <constraint firstItem="qN2-kg-fnk" firstAttribute="trailing" secondItem="gcY-32-axe" secondAttribute="trailing" id="sPp-hD-hN4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="privacyTableView" destination="gcY-32-axe" id="LHQ-eU-aoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag2-1Q-mKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="785"/>
+        </scene>
+        <!--Term And Condition View Controller-->
+        <scene sceneID="pIR-fk-L2n">
+            <objects>
+                <viewController storyboardIdentifier="TermAndConditionViewController" id="4FE-Li-qlX" customClass="TermAndConditionViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3l-pI-WWz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W7f-r3-zME">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="termCell" textLabel="kUC-Vb-WGV" style="IBUITableViewCellStyleDefault" id="50l-Ow-uOZ">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="2062.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="50l-Ow-uOZ" id="tH9-XM-bcd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="2062.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kUC-Vb-WGV">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="2062.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <mutableString key="text">Terms and Conditions for PicoArt
+
+Effective Date: December 12, 2023.
+
+1. Acceptance of Terms
+
+By downloading, installing, or using the PicoArt mobile application ("the App"), you agree to be bound by these Terms and Conditions. If you do not agree to these Terms and Conditions, please refrain from using the App.
+
+2. Use of the App
+
+2.1 License: Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, and revocable license to use the App for personal, non-commercial purposes on your mobile device.
+
+2.2 Prohibited Activities: You agree not to:
+
+Use the App for any illegal or unauthorized purpose.
+Attempt to gain unauthorized access to our systems or networks.
+Modify, decompile, reverse engineer, or disassemble the App.
+Interfere with or disrupt the App or servers.
+Use the App in a manner that may harm, impair, or overburden our servers or networks.
+3. Privacy Policy
+
+Your use of the App is also governed by our Privacy Policy, available at [Link to Privacy Policy]. Please review the Privacy Policy to understand how we collect, use, and protect your information.
+
+4. Intellectual Property
+
+All content, trademarks, logos, and intellectual property within the App are the property of PicoArt and protected by applicable copyright and intellectual property laws. You may not use, copy, or reproduce any of these materials without our prior written consent.
+
+5. Disclaimer
+
+The App is provided "as is" without any warranties or representations, express or implied. We do not guarantee the accuracy, availability, or functionality of the App. Your use of the App is at your own risk.
+
+6. Limitation of Liability
+
+To the extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of the App.
+
+7. Changes to Terms and Conditions
+
+We reserve the right to update or modify these Terms and Conditions at any time. We will notify users of any significant changes by updating the "Effective Date" at the beginning of these Terms and Conditions. Continued use of the App after such modifications shall constitute your consent to the changes.
+
+8. Termination
+
+We may terminate or suspend your access to the App at our discretion, without notice, for any violation of these Terms and Conditions.
+
+9. Contact Us
+
+If you have any questions or concerns regarding these Terms and Conditions or your use of the App, please contact us at kuldeepioskk@gmail.com.
+
+Thank you for using PicoArt.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4FE-Li-qlX" id="g0Z-xw-hfq"/>
+                                    <outlet property="delegate" destination="4FE-Li-qlX" id="599-3M-fo5"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6C-WI-JIa">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PicoArt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJc-Ey-Dmu">
+                                        <rect key="frame" x="173" y="13" width="68" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zu-f7-x4Q">
+                                        <rect key="frame" x="10" y="8" width="55.5" height="34"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.fill" catalog="system" title=" "/>
+                                        <connections>
+                                            <action selector="didTapOnBackButton:" destination="4FE-Li-qlX" eventType="touchUpInside" id="zGh-Wa-foU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2zu-f7-x4Q" firstAttribute="leading" secondItem="n6C-WI-JIa" secondAttribute="leading" constant="10" id="Cqa-dx-MR1"/>
+                                    <constraint firstItem="2zu-f7-x4Q" firstAttribute="centerY" secondItem="n6C-WI-JIa" secondAttribute="centerY" id="bIZ-if-ayf"/>
+                                    <constraint firstItem="HJc-Ey-Dmu" firstAttribute="centerY" secondItem="n6C-WI-JIa" secondAttribute="centerY" id="oOq-yP-DD8"/>
+                                    <constraint firstItem="HJc-Ey-Dmu" firstAttribute="centerX" secondItem="n6C-WI-JIa" secondAttribute="centerX" id="tdR-ir-WDN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w48-mx-PIo"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n6C-WI-JIa" firstAttribute="trailing" secondItem="w48-mx-PIo" secondAttribute="trailing" id="BHd-Lb-sAE"/>
+                            <constraint firstItem="w48-mx-PIo" firstAttribute="bottom" secondItem="W7f-r3-zME" secondAttribute="bottom" id="SG5-0n-quJ"/>
+                            <constraint firstItem="n6C-WI-JIa" firstAttribute="top" secondItem="w48-mx-PIo" secondAttribute="top" id="VHc-pw-aAi"/>
+                            <constraint firstItem="n6C-WI-JIa" firstAttribute="height" secondItem="B3l-pI-WWz" secondAttribute="height" multiplier="0.0558036" id="VRR-dv-9Zb"/>
+                            <constraint firstItem="n6C-WI-JIa" firstAttribute="leading" secondItem="w48-mx-PIo" secondAttribute="leading" id="d5N-8o-igf"/>
+                            <constraint firstItem="W7f-r3-zME" firstAttribute="leading" secondItem="B3l-pI-WWz" secondAttribute="leading" id="tE7-iA-8lU"/>
+                            <constraint firstAttribute="trailing" secondItem="W7f-r3-zME" secondAttribute="trailing" id="uIV-cd-mdk"/>
+                            <constraint firstItem="W7f-r3-zME" firstAttribute="top" secondItem="n6C-WI-JIa" secondAttribute="bottom" constant="10" id="xD2-qy-ZWK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="termTableView" destination="W7f-r3-zME" id="7RL-pU-ytM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcX-uQ-ngq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412" y="785"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="tT1-jS-shQ">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" id="XuX-1u-oqf" customClass="AboutUsViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C3N-A2-CTe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-ds-tXi">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Jbf-C0-xfe" style="IBUITableViewCellStyleDefault" id="hqL-aO-tUF">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="666.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hqL-aO-tUF" id="0fZ-ZC-JMe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="666.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jbf-C0-xfe">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="666.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">PicoArt, our iOS app, offers a powerful and versatile solution for image editing and customization, catering to a wide range of creative needs. With PicoArt's user-friendly interface, you can effortlessly add text to your images, allowing you to express your thoughts, create memorable captions, or design eye-catching promotional materials. The app also enables you to unleash your artistic side by providing intuitive drawing tools, empowering you to enhance your images with unique illustrations and annotations. Whether you're an amateur artist or a professional designer, you'll find PicoArt's drawing features both accessible and responsive.
+
+In addition to these creative capabilities, PicoArt simplifies image management through a precise cropping feature, allowing you to trim and resize your images to perfection. Whether you're preparing images for social media, crafting personalized greeting cards, or editing photos for professional use, PicoArt empowers you to achieve your desired results with ease. Enhance, customize, and transform your images like never before with PicoArt's comprehensive editing suite, all in the palm of your hand.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XuX-1u-oqf" id="8Mk-c0-z7g"/>
+                                    <outlet property="delegate" destination="XuX-1u-oqf" id="Jae-vg-SUd"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVZ-ph-QEU">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PicoArt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTD-D0-gvO">
+                                        <rect key="frame" x="173" y="13" width="68" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFz-Bq-GMe">
+                                        <rect key="frame" x="10" y="7.5" width="55.5" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.fill" catalog="system" title=" "/>
+                                        <connections>
+                                            <action selector="didTaponBackButton:" destination="XuX-1u-oqf" eventType="touchUpInside" id="sNW-Ne-e67"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lFz-Bq-GMe" firstAttribute="leading" secondItem="dVZ-ph-QEU" secondAttribute="leading" constant="10" id="4SU-ZW-mof"/>
+                                    <constraint firstItem="lFz-Bq-GMe" firstAttribute="centerY" secondItem="dVZ-ph-QEU" secondAttribute="centerY" id="ClS-9W-vgZ"/>
+                                    <constraint firstItem="JTD-D0-gvO" firstAttribute="centerY" secondItem="dVZ-ph-QEU" secondAttribute="centerY" id="Dlq-Iz-roo"/>
+                                    <constraint firstItem="JTD-D0-gvO" firstAttribute="centerX" secondItem="dVZ-ph-QEU" secondAttribute="centerX" id="wb8-T6-Vn0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s0n-Pn-a7a"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eqd-ds-tXi" firstAttribute="top" secondItem="dVZ-ph-QEU" secondAttribute="bottom" constant="10" id="1Ix-cP-UaD"/>
+                            <constraint firstItem="dVZ-ph-QEU" firstAttribute="trailing" secondItem="s0n-Pn-a7a" secondAttribute="trailing" id="94d-Su-lfh"/>
+                            <constraint firstItem="s0n-Pn-a7a" firstAttribute="trailing" secondItem="eqd-ds-tXi" secondAttribute="trailing" id="DtD-ti-rVr"/>
+                            <constraint firstItem="eqd-ds-tXi" firstAttribute="leading" secondItem="s0n-Pn-a7a" secondAttribute="leading" id="FZZ-QG-SCC"/>
+                            <constraint firstItem="dVZ-ph-QEU" firstAttribute="leading" secondItem="s0n-Pn-a7a" secondAttribute="leading" id="Z6b-nK-paH"/>
+                            <constraint firstItem="dVZ-ph-QEU" firstAttribute="height" secondItem="C3N-A2-CTe" secondAttribute="height" multiplier="0.0558036" id="osR-BO-bi7"/>
+                            <constraint firstItem="dVZ-ph-QEU" firstAttribute="top" secondItem="s0n-Pn-a7a" secondAttribute="top" id="qcL-BU-iX2"/>
+                            <constraint firstItem="s0n-Pn-a7a" firstAttribute="bottom" secondItem="eqd-ds-tXi" secondAttribute="bottom" id="rQo-Mw-KIc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutUsTableView" destination="eqd-ds-tXi" id="wSg-zF-nDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sg-uF-UmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="785"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="5qp-Yb-eXg">
             <objects>
-                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="CUR-6V-v8S" customClass="PrivacyPolicyViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CUR-6V-v8S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gtJ-AT-ha8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,24 +900,215 @@
             </objects>
             <point key="canvasLocation" x="2033" y="1508"/>
         </scene>
+        <!--Second Intro View Controller-->
+        <scene sceneID="qol-5w-Wqm">
+            <objects>
+                <viewController storyboardIdentifier="SecondIntroViewController" id="u9b-Tr-pXa" customClass="SecondIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d50-eh-lBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymS-TX-SN2">
+                                <rect key="frame" x="169.5" y="777" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="NGG-9L-8vz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnSkipButton:" destination="u9b-Tr-pXa" eventType="touchUpInside" id="bji-Fe-4rd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Apple iPhone 8 Plus Screenshot 1" translatesAutoresizingMaskIntoConstraints="NO" id="nTj-a7-hQd">
+                                <rect key="frame" x="0.0" y="48" width="414" height="704"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tn4-DG-7en"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.85490196078431369" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ymS-TX-SN2" firstAttribute="top" secondItem="nTj-a7-hQd" secondAttribute="bottom" constant="25" id="TeA-DB-Vox"/>
+                            <constraint firstItem="nTj-a7-hQd" firstAttribute="leading" secondItem="d50-eh-lBj" secondAttribute="leading" id="jnH-ZW-Dc2"/>
+                            <constraint firstItem="ymS-TX-SN2" firstAttribute="centerX" secondItem="d50-eh-lBj" secondAttribute="centerX" id="oOY-OM-JcP"/>
+                            <constraint firstItem="tn4-DG-7en" firstAttribute="bottom" secondItem="ymS-TX-SN2" secondAttribute="bottom" constant="50" id="qGB-W7-Zz7"/>
+                            <constraint firstItem="nTj-a7-hQd" firstAttribute="trailing" secondItem="d50-eh-lBj" secondAttribute="trailing" id="sJL-wp-Gy8"/>
+                            <constraint firstItem="nTj-a7-hQd" firstAttribute="top" secondItem="tn4-DG-7en" secondAttribute="top" id="w1h-kf-d3c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJi-q9-KRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="-741"/>
+        </scene>
+        <!--Third Intro View Controller-->
+        <scene sceneID="e2U-TD-KhB">
+            <objects>
+                <viewController storyboardIdentifier="ThirdIntroViewController" id="vqm-AS-gS9" customClass="ThirdIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSK-Bi-Ne5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpr-iE-3Xg">
+                                <rect key="frame" x="169.5" y="777" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="YL5-ZT-eQd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnGoButton:" destination="vqm-AS-gS9" eventType="touchUpInside" id="Xqq-E6-0T2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Apple iPhone 8 Plus Screenshot 2" translatesAutoresizingMaskIntoConstraints="NO" id="3VP-LZ-YIi">
+                                <rect key="frame" x="0.0" y="48" width="414" height="704"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3lL-gn-4oa"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.85490196078431369" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3VP-LZ-YIi" firstAttribute="leading" secondItem="hSK-Bi-Ne5" secondAttribute="leading" id="EDw-3v-PWB"/>
+                            <constraint firstItem="3VP-LZ-YIi" firstAttribute="trailing" secondItem="hSK-Bi-Ne5" secondAttribute="trailing" id="FbA-LD-liw"/>
+                            <constraint firstItem="Cpr-iE-3Xg" firstAttribute="centerX" secondItem="hSK-Bi-Ne5" secondAttribute="centerX" id="Ic9-WQ-swc"/>
+                            <constraint firstItem="3lL-gn-4oa" firstAttribute="bottom" secondItem="Cpr-iE-3Xg" secondAttribute="bottom" constant="50" id="PYE-VK-0QL"/>
+                            <constraint firstItem="Cpr-iE-3Xg" firstAttribute="top" secondItem="3VP-LZ-YIi" secondAttribute="bottom" constant="25" id="aFf-lP-TI2"/>
+                            <constraint firstItem="3VP-LZ-YIi" firstAttribute="top" secondItem="3lL-gn-4oa" secondAttribute="top" id="r0p-Z7-8Kp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6P-rw-WeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="-735"/>
+        </scene>
+        <!--Fourth Intro View Controller-->
+        <scene sceneID="R5k-eX-XKA">
+            <objects>
+                <viewController storyboardIdentifier="FourthIntroViewController" id="b9K-tk-Le6" customClass="FourthIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LoM-Nd-ihj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKF-bJ-6Rb">
+                                <rect key="frame" x="169.5" y="777" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="hU5-4A-iux"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnSkipButton:" destination="b9K-tk-Le6" eventType="touchUpInside" id="qM3-nF-lsN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Apple iPhone 8 Plus Screenshot 3" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-jW-sZJ">
+                                <rect key="frame" x="0.0" y="48" width="414" height="704"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="npB-98-pca"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xKF-bJ-6Rb" firstAttribute="centerX" secondItem="LoM-Nd-ihj" secondAttribute="centerX" id="22d-yV-VNL"/>
+                            <constraint firstItem="gi8-jW-sZJ" firstAttribute="leading" secondItem="LoM-Nd-ihj" secondAttribute="leading" id="2vm-CK-hrJ"/>
+                            <constraint firstItem="npB-98-pca" firstAttribute="bottom" secondItem="xKF-bJ-6Rb" secondAttribute="bottom" constant="50" id="AKw-3A-1eT"/>
+                            <constraint firstItem="gi8-jW-sZJ" firstAttribute="trailing" secondItem="LoM-Nd-ihj" secondAttribute="trailing" id="EWe-dG-seP"/>
+                            <constraint firstItem="gi8-jW-sZJ" firstAttribute="top" secondItem="npB-98-pca" secondAttribute="top" id="aHv-Vz-til"/>
+                            <constraint firstItem="xKF-bJ-6Rb" firstAttribute="top" secondItem="gi8-jW-sZJ" secondAttribute="bottom" constant="25" id="aKU-mB-11T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEA-Rl-bR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="-735"/>
+        </scene>
+        <!--Fifth Intro View Controller-->
+        <scene sceneID="cmh-Ce-WGI">
+            <objects>
+                <viewController storyboardIdentifier="FifthIntroViewController" id="Acr-XC-mvH" customClass="FifthIntroViewController" customModule="PicoArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Oy-Zh-d5M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z5-r8-A2F">
+                                <rect key="frame" x="169.5" y="777" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="NsG-Bj-i8n"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnGoButton:" destination="Acr-XC-mvH" eventType="touchUpInside" id="lX5-Aa-NBT"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Apple iPhone 8 Plus Screenshot 4" translatesAutoresizingMaskIntoConstraints="NO" id="Xcl-96-Ehw">
+                                <rect key="frame" x="0.0" y="48" width="414" height="704"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WM4-tq-dVm"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0z5-r8-A2F" firstAttribute="centerX" secondItem="6Oy-Zh-d5M" secondAttribute="centerX" id="0zp-tr-OvB"/>
+                            <constraint firstItem="Xcl-96-Ehw" firstAttribute="leading" secondItem="6Oy-Zh-d5M" secondAttribute="leading" id="6SY-UO-AeB"/>
+                            <constraint firstItem="0z5-r8-A2F" firstAttribute="top" secondItem="Xcl-96-Ehw" secondAttribute="bottom" constant="25" id="T6G-NK-tW2"/>
+                            <constraint firstItem="Xcl-96-Ehw" firstAttribute="top" secondItem="WM4-tq-dVm" secondAttribute="top" id="hLf-Xa-6wU"/>
+                            <constraint firstItem="Xcl-96-Ehw" firstAttribute="trailing" secondItem="6Oy-Zh-d5M" secondAttribute="trailing" id="ke1-T7-rSx"/>
+                            <constraint firstItem="WM4-tq-dVm" firstAttribute="bottom" secondItem="0z5-r8-A2F" secondAttribute="bottom" constant="50" id="xml-Vq-cbc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlb-sz-MYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2206" y="-735"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="EK1-lu-G9f">
+            <size key="intrinsicContentSize" width="79" height="38"/>
+        </designable>
+        <designable name="Vhm-cp-b54">
+            <size key="intrinsicContentSize" width="74" height="38"/>
+        </designable>
+        <designable name="ds9-88-GhH">
+            <size key="intrinsicContentSize" width="61" height="38"/>
+        </designable>
+        <designable name="f05-Mn-5Gf">
+            <size key="intrinsicContentSize" width="155.5" height="38"/>
+        </designable>
+        <designable name="sY6-hQ-Geg">
+            <size key="intrinsicContentSize" width="108.5" height="38"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="Apple iPhone 8 Plus Screenshot 0" width="1242" height="2208"/>
+        <image name="Apple iPhone 8 Plus Screenshot 1" width="1242" height="2208"/>
+        <image name="Apple iPhone 8 Plus Screenshot 2" width="1242" height="2208"/>
+        <image name="Apple iPhone 8 Plus Screenshot 3" width="1242" height="2208"/>
+        <image name="Apple iPhone 8 Plus Screenshot 4" width="1242" height="2208"/>
+        <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="gear.circle" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="icons8-play-32" width="32" height="32"/>
+        <image name="newAppBanner" width="500" height="500"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

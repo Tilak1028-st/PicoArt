@@ -12,7 +12,6 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var settingTableView: UITableView!
     
     var settingItems: [String] = ["About us", "Support", "Share with Friends", ]
-    
     var privarySettingItems : [String] = ["Privacy Policy", "Term and conditions"]
     
     override func viewDidLoad() {

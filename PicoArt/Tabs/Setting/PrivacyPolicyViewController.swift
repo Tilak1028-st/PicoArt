@@ -6,19 +6,30 @@
 //
 
 import UIKit
-import WebKit
 
-class PrivacyPolicyViewController: UIViewController, WKNavigationDelegate {
+class PrivacyPolicyViewController: UIViewController {
 
-    @IBOutlet weak var privacyWebView: WKWebView!
+    @IBOutlet weak var privacyTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url = URL(string: "https://sites.google.com/view/post-saversaver-for-instagram/home?authuser=4") {
-            let request = URLRequest(url: url)
-            privacyWebView.navigationDelegate = self
-            privacyWebView.load(request)
-        }
+        
+    }
+    
+    @IBAction func didTapOnBackButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+}
+
+extension PrivacyPolicyViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = privacyTableView.dequeueReusableCell(withIdentifier: "privacyCell", for: indexPath)
+        return cell
     }
 }

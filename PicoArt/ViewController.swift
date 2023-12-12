@@ -10,7 +10,7 @@ import iOSPhotoEditor
 import Photos
 
 class ViewController: UIViewController {
-    var newImage = ["hat1", "hat2", "hat3", "hat4", "beard"]
+    var newImage = ["hat1", "hat2", "hat3", "hat4", "hat5", "hat6", "hat7", "hat8", "hat9", "hat10", "beard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

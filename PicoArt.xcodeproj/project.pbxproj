@@ -10,23 +10,38 @@
 		645646C9BB6F4C2610F221CC /* Pods_PicoArt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9B84A7C08D96CF5BA9B5B /* Pods_PicoArt.framework */; };
 		721282BE2AA0D45200FE554E /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721282BC2AA0D45200FE554E /* CollectionTableViewCell.swift */; };
 		721282BF2AA0D45200FE554E /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721282BD2AA0D45200FE554E /* CollectionTableViewCell.xib */; };
+		722BB5652B283BA900B73C87 /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB5642B283BA900B73C87 /* FirstIntroViewController.swift */; };
+		722BB5672B283BB700B73C87 /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB5662B283BB700B73C87 /* SecondIntroViewController.swift */; };
+		722BB5692B283BC300B73C87 /* ThirdIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB5682B283BC300B73C87 /* ThirdIntroViewController.swift */; };
+		722BB56B2B283BDE00B73C87 /* MainIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB56A2B283BDE00B73C87 /* MainIntroViewController.swift */; };
+		722BB56D2B2861FB00B73C87 /* FourthIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB56C2B2861FB00B73C87 /* FourthIntroViewController.swift */; };
+		722BB56F2B28620700B73C87 /* FifthIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BB56E2B28620700B73C87 /* FifthIntroViewController.swift */; };
 		723ADA1D2A99F3D600D216AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA1C2A99F3D600D216AB /* AppDelegate.swift */; };
 		723ADA1F2A99F3D600D216AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */; };
 		723ADA212A99F3D600D216AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ADA202A99F3D600D216AB /* ViewController.swift */; };
 		723ADA242A99F3D600D216AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA222A99F3D600D216AB /* Main.storyboard */; };
 		723ADA262A99F3D800D216AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA252A99F3D800D216AB /* Assets.xcassets */; };
 		723ADA292A99F3D800D216AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723ADA272A99F3D800D216AB /* LaunchScreen.storyboard */; };
+		72C85DFD2ABCC82B0078D2AA /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C85DFC2ABCC82B0078D2AA /* AboutUsViewController.swift */; };
 		72DD5E0E2AA05989007E2CCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */; };
 		72DD5E102AA05996007E2CCD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E0F2AA05996007E2CCD /* CollectionViewController.swift */; };
 		72DD5E122AA059A1007E2CCD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E112AA059A1007E2CCD /* SettingViewController.swift */; };
 		72DD5E142AA063D4007E2CCD /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */; };
 		72DD5E162AA07D47007E2CCD /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */; };
 		72DD5E182AA07D62007E2CCD /* TermAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */; };
+		72E7B4C52ABCCBBF00490738 /* MGK3DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7B4C42ABCCBBF00490738 /* MGK3DButton.swift */; };
+		72E7B4C72ABCCDA300490738 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7B4C62ABCCDA300490738 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		721282BC2AA0D45200FE554E /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		721282BD2AA0D45200FE554E /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		722BB5642B283BA900B73C87 /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
+		722BB5662B283BB700B73C87 /* SecondIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
+		722BB5682B283BC300B73C87 /* ThirdIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroViewController.swift; sourceTree = "<group>"; };
+		722BB56A2B283BDE00B73C87 /* MainIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntroViewController.swift; sourceTree = "<group>"; };
+		722BB56C2B2861FB00B73C87 /* FourthIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthIntroViewController.swift; sourceTree = "<group>"; };
+		722BB56E2B28620700B73C87 /* FifthIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthIntroViewController.swift; sourceTree = "<group>"; };
 		723ADA192A99F3D600D216AB /* PicoArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicoArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ADA1C2A99F3D600D216AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,12 +50,15 @@
 		723ADA252A99F3D800D216AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723ADA282A99F3D800D216AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723ADA2A2A99F3D800D216AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C85DFC2ABCC82B0078D2AA /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		72DD5E0F2AA05996007E2CCD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		72DD5E112AA059A1007E2CCD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionViewController.swift; sourceTree = "<group>"; };
+		72E7B4C42ABCCBBF00490738 /* MGK3DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGK3DButton.swift; sourceTree = "<group>"; };
+		72E7B4C62ABCCDA300490738 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A8C9B84A7C08D96CF5BA9B5B /* Pods_PicoArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicoArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB8958598B08EC9EC7DB325 /* Pods-PicoArt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicoArt.release.xcconfig"; path = "Target Support Files/Pods-PicoArt/Pods-PicoArt.release.xcconfig"; sourceTree = "<group>"; };
 		ECF606A2C417D446C9726E72 /* Pods-PicoArt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicoArt.debug.xcconfig"; path = "Target Support Files/Pods-PicoArt/Pods-PicoArt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +85,19 @@
 			path = CollectionTableCell;
 			sourceTree = "<group>";
 		};
+		722BB5632B283B8600B73C87 /* IntroVc */ = {
+			isa = PBXGroup;
+			children = (
+				722BB56A2B283BDE00B73C87 /* MainIntroViewController.swift */,
+				722BB5642B283BA900B73C87 /* FirstIntroViewController.swift */,
+				722BB5662B283BB700B73C87 /* SecondIntroViewController.swift */,
+				722BB5682B283BC300B73C87 /* ThirdIntroViewController.swift */,
+				722BB56C2B2861FB00B73C87 /* FourthIntroViewController.swift */,
+				722BB56E2B28620700B73C87 /* FifthIntroViewController.swift */,
+			);
+			path = IntroVc;
+			sourceTree = "<group>";
+		};
 		723ADA102A99F3D600D216AB = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +122,7 @@
 				723ADA1C2A99F3D600D216AB /* AppDelegate.swift */,
 				723ADA1E2A99F3D600D216AB /* SceneDelegate.swift */,
 				723ADA202A99F3D600D216AB /* ViewController.swift */,
+				72E7B4C42ABCCBBF00490738 /* MGK3DButton.swift */,
 				72DD5E092AA0594C007E2CCD /* Tabs */,
 				723ADA222A99F3D600D216AB /* Main.storyboard */,
 				723ADA252A99F3D800D216AB /* Assets.xcassets */,
@@ -112,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				72DD5E132AA063D4007E2CCD /* MainTabViewController.swift */,
+				722BB5632B283B8600B73C87 /* IntroVc */,
 				72DD5E0A2AA05955007E2CCD /* Home */,
 				72DD5E0B2AA0595C007E2CCD /* Collection */,
 				72DD5E0C2AA05966007E2CCD /* Setting */,
@@ -123,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				72DD5E0D2AA05989007E2CCD /* HomeViewController.swift */,
+				72E7B4C62ABCCDA300490738 /* MainViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -142,6 +176,7 @@
 				72DD5E112AA059A1007E2CCD /* SettingViewController.swift */,
 				72DD5E152AA07D47007E2CCD /* PrivacyPolicyViewController.swift */,
 				72DD5E172AA07D62007E2CCD /* TermAndConditionViewController.swift */,
+				72C85DFC2ABCC82B0078D2AA /* AboutUsViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -272,15 +307,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				723ADA212A99F3D600D216AB /* ViewController.swift in Sources */,
+				72E7B4C72ABCCDA300490738 /* MainViewController.swift in Sources */,
 				72DD5E182AA07D62007E2CCD /* TermAndConditionViewController.swift in Sources */,
 				723ADA1D2A99F3D600D216AB /* AppDelegate.swift in Sources */,
+				722BB5652B283BA900B73C87 /* FirstIntroViewController.swift in Sources */,
 				723ADA1F2A99F3D600D216AB /* SceneDelegate.swift in Sources */,
 				72DD5E162AA07D47007E2CCD /* PrivacyPolicyViewController.swift in Sources */,
 				721282BE2AA0D45200FE554E /* CollectionTableViewCell.swift in Sources */,
+				722BB56F2B28620700B73C87 /* FifthIntroViewController.swift in Sources */,
 				72DD5E0E2AA05989007E2CCD /* HomeViewController.swift in Sources */,
+				722BB56B2B283BDE00B73C87 /* MainIntroViewController.swift in Sources */,
 				72DD5E102AA05996007E2CCD /* CollectionViewController.swift in Sources */,
 				72DD5E142AA063D4007E2CCD /* MainTabViewController.swift in Sources */,
+				722BB5672B283BB700B73C87 /* SecondIntroViewController.swift in Sources */,
+				72C85DFD2ABCC82B0078D2AA /* AboutUsViewController.swift in Sources */,
+				72E7B4C52ABCCBBF00490738 /* MGK3DButton.swift in Sources */,
 				72DD5E122AA059A1007E2CCD /* SettingViewController.swift in Sources */,
+				722BB5692B283BC300B73C87 /* ThirdIntroViewController.swift in Sources */,
+				722BB56D2B2861FB00B73C87 /* FourthIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,16 +470,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5Y34994PL6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2KMG66V6L7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicoArt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PicoArt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to your Photos to save images you create.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -446,6 +494,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appfinity.PicoArt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "PicoArt Development Profile";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -461,16 +511,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5Y34994PL6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2KMG66V6L7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicoArt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PicoArt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to your Photos to save images you create.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -481,6 +535,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appfinity.PicoArt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "PicoArt Development Profile";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;

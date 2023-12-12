@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL_E_2023-12-12_11.28.39_-_A_sleek__modern_app_icon_for_a_photo_editing_iOS_app._The_icon_should_feature_a_stylized_camera_lens_in_the_center__symbolizing_photography__with_a_bu-removebg-preview.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
+  }
+}

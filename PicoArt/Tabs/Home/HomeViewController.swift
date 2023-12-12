@@ -12,22 +12,76 @@ import Photos
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var topView: UIView!
-    var newImage = ["hat1", "hat2", "hat3", "hat4", "beard"]
+    var newImage = ["hat1", "hat2", "hat3", "hat4", "hat5", "hat6", "hat7", "hat8", "hat9", "hat10", "beard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topView.applyShadow(to: topView, shadowOffset: CGSize(width: 0, height: 3), shadowRadius: 3)
+        topView.applyShadow(to: topView, shadowOffset: CGSize(width: 0, height: 1), shadowRadius: 1)
+        self.navigationController?.navigationBar.isHidden = true
     }
-
+    
+    
+    @IBAction func didTapOnBackButton(_ sender: Any) {
+        let settingVc = self.storyboard?.instantiateViewController(identifier: "MainViewController") as! MainViewController
+        self.navigationController?.pushViewController(settingVc, animated: true)
+    }
+    
     @IBAction func didTapOnImportPicture(_ sender: UIButton) {
-        pickImageFromLibrary()
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            pickImageFromLibrary()
+            
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { [weak self] status in
+                if status == .authorized {
+                    self?.pickImageFromLibrary()
+                } else {
+                    self?.showPermissionDeniedAlert()
+                    print("Permission denied to access the photo library.")
+                }
+            }
+            
+        case .denied, .restricted:
+            showPermissionDeniedAlert()
+            print("Permission denied to access the photo library.")
+        @unknown default:
+            break
+        }
     }
     
     func pickImageFromLibrary() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func showPermissionDeniedAlert() {
+        let alertController = UIAlertController(
+            title: "Permission Denied",
+            message: "To edit images, please allow access to your photo library in Settings.",
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        ))
+        
+        alertController.addAction(UIAlertAction(
+            title: "Settings",
+            style: .default,
+            handler: { _ in
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL)
+                }
+            }
+        ))
+        present(alertController, animated: true, completion: nil)
     }
 }
 
