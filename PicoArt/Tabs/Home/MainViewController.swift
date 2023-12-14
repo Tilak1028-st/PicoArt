@@ -22,6 +22,11 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func didTapOnBackButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func shareSheet() {
        
     }

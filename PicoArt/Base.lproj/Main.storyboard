@@ -418,6 +418,17 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg7-Lh-wQS">
+                                <rect key="frame" x="20" y="48" width="27" height="23.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.left.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnBackButton:" destination="7iq-jX-22m" eventType="touchUpInside" id="x67-bc-ywG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VUP-hP-G5A"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,7 +438,9 @@
                             <constraint firstItem="YDJ-fS-kRf" firstAttribute="top" secondItem="6Qy-CF-hpI" secondAttribute="bottom" constant="50" id="R7f-bz-bad"/>
                             <constraint firstItem="YDJ-fS-kRf" firstAttribute="height" secondItem="Yxd-LW-on6" secondAttribute="height" multiplier="0.5" id="TCT-o5-MKH"/>
                             <constraint firstItem="YDJ-fS-kRf" firstAttribute="width" secondItem="Yxd-LW-on6" secondAttribute="width" multiplier="0.5" id="b1d-7K-JSG"/>
+                            <constraint firstItem="yg7-Lh-wQS" firstAttribute="top" secondItem="6Qy-CF-hpI" secondAttribute="top" id="do0-dQ-Zbk"/>
                             <constraint firstItem="6Qy-CF-hpI" firstAttribute="centerX" secondItem="Yxd-LW-on6" secondAttribute="centerX" id="fUy-tz-h4k"/>
+                            <constraint firstItem="yg7-Lh-wQS" firstAttribute="leading" secondItem="VUP-hP-G5A" secondAttribute="leading" constant="20" id="zg9-GN-L5W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Il-0K-7bU"/>
@@ -548,7 +561,7 @@
                                                     <rect key="frame" x="20" y="0.0" width="374" height="1504.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <mutableString key="text">Privacy Policy for PicoArt
+                                                    <string key="text">Privacy Policy for PicoArt
 
 Effective Date: December 12, 2023.
 
@@ -580,7 +593,7 @@ Contact Us
 
 If you have any questions or concerns about this Privacy Policy or your privacy while using PicoArt, please contact us at kuldeepioskk@gmail.com.
 
-Thank you for choosing PicoArt for your image editing needs.</mutableString>
+Thank you for choosing PicoArt for your image editing needs.</string>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" red="0.86274509799999999" green="0.85490196080000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -666,7 +679,7 @@ Thank you for choosing PicoArt for your image editing needs.</mutableString>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kUC-Vb-WGV">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="2062.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <mutableString key="text">Terms and Conditions for PicoArt
+                                                    <string key="text">Terms and Conditions for PicoArt
 
 Effective Date: December 12, 2023.
 
@@ -713,7 +726,7 @@ We may terminate or suspend your access to the App at our discretion, without no
 
 If you have any questions or concerns regarding these Terms and Conditions or your use of the App, please contact us at kuldeepioskk@gmail.com.
 
-Thank you for using PicoArt.</mutableString>
+Thank you for using PicoArt.</string>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1102,13 +1115,13 @@ In addition to these creative capabilities, PicoArt simplifies image management 
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
